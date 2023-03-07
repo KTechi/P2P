@@ -34,6 +34,7 @@ function initialize_Peer() {
             messages.append(message)
             message.classList = 'receive-message'
             message.innerHTML = String(data)
+            messages.scrollTop = messages.scrollHeight
 
             console.log('from:', connection.peer)
             message.style.backgroundColor = color_palette[
