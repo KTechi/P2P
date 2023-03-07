@@ -1,0 +1,133 @@
+@charset "UTF-8";
+
+* {
+    width:  100%;
+    height: 100%;
+    margin: 0%;
+    color: #FFF;
+    background: #000;
+    user-select: none;
+}
+
+/* ================ Message ================ */
+#messages {
+    height: calc(100% - 4rem);
+    background: #215;
+    background-image: linear-gradient(80deg, #101828 50%, #261155 0%);
+    overflow: scroll;
+}
+#messages::-webkit-scrollbar {
+    width: 5px;
+    height: 0;
+}
+#messages::-webkit-scrollbar-track {
+    background-color: #333;
+    border-radius: 0;
+}
+#messages::-webkit-scrollbar-thumb {
+    background-color: #CCC;
+    border-radius: 0;
+}
+.system-message, .receive-message, .send-message {
+    width: fit-content;
+    height: auto;
+    max-width: 85%;
+    margin: 1rem auto;
+    padding: .2rem .5rem;
+    background: #555;
+    border-radius: 8px;
+    word-wrap: break-word;
+    user-select: text;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1rem;
+}
+.receive-message {
+    margin-left: 1rem;
+    background: #316;
+    font-size: 1.4rem;
+}
+.send-message {
+    margin-right: 1rem;
+    background: #02F;
+    font-size: 1.4rem;
+}
+
+/* ================ Setting ================ */
+#setting {
+    position: absolute;
+    bottom: .5rem;
+    right:  .5rem;
+    width:  4rem;
+    height: 3rem;
+    border: none;
+    border-radius: .5rem;
+    outline: none;
+    background: url(../image/up.png) no-repeat;
+    background-size: 80%;
+    background-position: 50%;
+    background-color: #90D;
+}
+#connect-baseline {
+    position: absolute;
+    bottom: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 0;
+    visibility: hidden;
+}
+#connect-window {
+    display: grid;
+    place-items: center;
+    width:  fit-content;
+    height: fit-content;
+    background: #222;
+    border: 1.5px solid #DDD;
+    border-radius: 10px;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.4rem;
+}
+#Alice-id {
+    text-align: center;
+    width:  fit-content;
+    height: fit-content;
+    max-width: min(calc(90vw - 2rem), 20rem);
+    margin: 1rem;
+    background: #0000;
+    word-wrap: break-word;
+    user-select: text;
+}
+#Alice-id::before {
+    content: "myID";
+    color: #FFF9;
+    font-size: 1rem;
+}
+#Bob-id {
+    position: relative;
+    margin: 0 1rem 1rem 1rem;
+    border-bottom: #DDD solid 1.5px;
+}
+
+/* ================ Input ================ */
+form {
+    position: absolute;
+    bottom: 1rem;
+    left:   1rem;
+    width:  0;
+    height: 0;
+}
+input {
+    position: absolute;
+    bottom: 0;
+    left:   0;
+    width: 20rem;
+    height: 2rem;
+    border: none;
+    outline: none;
+    border-bottom: #FFF solid 1px;
+    z-index: 1;
+    background: rgba(0, 0, 0, .5);
+    backdrop-filter: blur(5px);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.4rem;
+}
