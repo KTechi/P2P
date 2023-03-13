@@ -25,6 +25,7 @@ function initialize_Peer() {
         messages.append(message)
         message.classList = 'system-message'
         message.innerHTML = 'Error'
+        messages.scrollTop = messages.scrollHeight
     })
 
     // Receive
