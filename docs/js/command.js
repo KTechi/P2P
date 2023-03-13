@@ -30,6 +30,7 @@ function submit(event) {
     messages.append(message)
     message.classList = 'send-message'
     message.innerHTML = input.value
+    messages.scrollTop = messages.scrollHeight
 
     for (const conn of connections)
         conn.send(input.value)
