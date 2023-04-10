@@ -120,7 +120,7 @@ input {
     position: absolute;
     bottom: 0;
     left:   0;
-    width: 20rem;
+    width: min(20rem, calc(100VW - 6rem));
     height: 2rem;
     border: none;
     outline: none;
